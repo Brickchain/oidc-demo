@@ -9,7 +9,6 @@
     },
     "private": true,
     "dependencies": {
-        "firebase-tools": "^3.16.0",
-        "handlebars": "^4.0.11"
+        "firebase-tools": "^3.16.0"
     }
 }
