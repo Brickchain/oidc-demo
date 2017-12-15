@@ -1,0 +1,14 @@
+{
+    "name": "firebase",
+    "description": "Firebase deploy stuff",
+    "scripts": {
+        "prepare": "cd functions; npm install; cd ../frontend; npm install; cd ..",
+        "build": "export PATH=$PATH:./node_modules/.bin; cd functions; npm run build; cd ../frontend; ng build --bh ./; cd ..",
+        "serve": "firebase serve --only functions,hosting",
+        "config": "cd functions; npm run config; cd ../frontend; npm run config; cd .."
+    },
+    "private": true,
+    "dependencies": {
+        "firebase-tools": "^3.16.0"
+    }
+}

@@ -1,0 +1,33 @@
+// 1. Import the initial variables
+@import "bulma/utilities/initial-variables"
+
+// 2. Customize
+// Add a serif family
+$family-sans-serif: "Source Sans Pro", "Helvetica Neue", "Helvetica", sans-serif
+$family-primary: $family-sans-serif
+
+// Colors
+$orange: #f76a0a
+$orange-invert: #b14c07
+
+// Change default colors
+$primary: $orange
+$primary-invert: $orange-invert
+
+// Sizes
+$section-padding: 30px 40px
+
+// 3. Import the rest
+@import 'bulma/utilities/all'
+@import 'bulma/base/all'
+@import 'bulma/elements/button'
+@import 'bulma/grid/all'
+@import 'bulma/elements/notification'
+
+// 4. Import own partials
+@import 'mixins/all'
+
+@import 'generic/all'
+@import 'text/all'
+@import 'header/all'
+@import 'calendar/all'

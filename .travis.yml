@@ -1,0 +1,27 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - "8.x"
+
+before_install:
+  - npm i npm@^4 -g
+
+install:
+  - npm install
+  - npm run prepare
+
+script:
+  - npm run build
+  - [ "$TRAVIS_BRANCH" == "master" ] && npm run config
+  - [ "$TRAVIS_BRANCH" == "master" ] && firebase $FIREBASE_PROJECT deploy --only hosting,functions
+
+env:
+  FIREBASE_PROJECT="oidc-demo-460e0"
+  BASE="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
+  BACKEND="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
+  FRONTEND="https://oidc-demo-fd28c.firebaseapp.com"
+  IDP=https://idp.plusintegrity.com"
+
+notifications:
+  email: false

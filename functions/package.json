@@ -1,0 +1,23 @@
+{
+    "name": "oidc-demo-functions",
+    "description": "Cloud Functions for Firebase",
+    "dependencies": {
+        "@types/firebase": "^2.4.32",
+        "cors": "^2.8.4",
+        "firebase-admin": "~4.2.1",
+        "firebase-functions": "^0.5.9",
+        "openid-client": "^1.19.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.0.37",
+        "typescript": "^2.3.2"
+    },
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "deploy": "tsc && firebase deploy --only functions",
+        "config": "cat config.js.template |envsubst > build/config.js"
+    },
+    "main": "build/index.js",
+    "private": true
+}

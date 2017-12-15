@@ -1,0 +1,24 @@
+
+<section class="section first-on-page center" *ngIf="!loading">
+
+</section>
+
+<section class="section center" *ngIf="loggedIn">
+  <h2>Hi {{ name }}</h2>
+</section>
+
+<section class="section center" *ngIf="loggedIn">
+  <button type="button" title="Close" class="button is-orange" (click)="sendPush()" [ngClass]="{'is-disabled': push == undefined}">Send me a message</button>
+</section>
+
+<section class="section center" *ngIf="!loggedIn">
+  <button type="button" title="Login with Integrity" class="button is-orange" (click)="login()">Login with Integrity</button>
+</section>
+
+<div id="loader" *ngIf="loading">
+  <div class="spinner">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</div>
