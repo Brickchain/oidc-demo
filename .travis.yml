@@ -17,7 +17,7 @@ script:
   - test "$TRAVIS_BRANCH" == "master" && firebase -P $FIREBASE_PROJECT deploy --only hosting,functions
 
 env:
-  FIREBASE_PROJECT="oidc-demo-460e0"
+  FIREBASE_PROJECT="oidc-demo-fd28c"
   BASE="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
   BACKEND="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
   FRONTEND="https://oidc-demo-fd28c.firebaseapp.com"
