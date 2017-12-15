@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - "8.x"
+  - "8"
 
 before_install:
   - npm i npm@^4 -g
@@ -13,8 +13,8 @@ install:
 
 script:
   - npm run build
-  - [ "$TRAVIS_BRANCH" == "master" ] && npm run config
-  - [ "$TRAVIS_BRANCH" == "master" ] && firebase $FIREBASE_PROJECT deploy --only hosting,functions
+  - test [ "$TRAVIS_BRANCH" == "master" ] && npm run config
+  - test [ "$TRAVIS_BRANCH" == "master" ] && firebase $FIREBASE_PROJECT deploy --only hosting,functions
 
 env:
   FIREBASE_PROJECT="oidc-demo-460e0"
