@@ -1,4 +1,4 @@
-# oidc-demo <img src="https://travis-ci.org/Brickchain/oidc-demo.svg?branch=master">
+# oidc-demo <a href="https://travis-ci.org/Brickchain/oidc-demo"><img src="https://travis-ci.org/Brickchain/oidc-demo.svg?branch=master"></a>
 Simple demo of our OAuth2/OpenID Connect provider<br>
 Try the demo: <a href="https://oidc-demo-fd28c.firebaseapp.com">https://oidc-demo-fd28c.firebaseapp.com</a>
 <br>

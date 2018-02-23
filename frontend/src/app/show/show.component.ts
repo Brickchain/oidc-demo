@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 import { URLSearchParams } from '@angular/http';
 import { Config } from '../config';
+import * as base64 from 'hi-base64';
 
 @Component({
   selector: 'app-page-show',
@@ -32,7 +33,8 @@ export class ShowComponent implements OnInit {
       this.loggedIn = true;
       Promise.resolve()
         .then(() => {
-          let s = atob(this.data.split('.')[1])
+          // let s = atob(this.data.split('.')[1])
+          let s = base64.decode(this.data.split('.')[1])
           this.msg = JSON.parse(s)
 
           if (this.msg.name != undefined) {

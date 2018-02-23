@@ -25,12 +25,13 @@
     "core-js": "^2.5.1",
     "hammer-timejs": "^1.1.0",
     "hammerjs": "^2.0.8",
+    "handlebars": "^4.0.11",
+    "hi-base64": "^0.2.1",
     "integrity-webview-client": "^0.1.0",
     "moment-timezone": "^0.5.14",
     "mydaterangepicker": "^4.1.9",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.17",
-    "handlebars": "^4.0.11"
+    "zone.js": "^0.8.17"
   },
   "devDependencies": {
     "@angular/cli": "^1.4.4",
