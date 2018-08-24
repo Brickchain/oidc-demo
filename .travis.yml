@@ -21,7 +21,7 @@ env:
   BASE="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
   BACKEND="https://us-central1-oidc-demo-fd28c.cloudfunctions.net"
   FRONTEND="https://oidc-demo-fd28c.firebaseapp.com"
-  IDP=https://idp.plusintegrity.com"
+  IDP=https://idp.svc.integrity.app"
 
 notifications:
   email: false
