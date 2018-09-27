@@ -35,6 +35,11 @@
       width: 100%;
       justify-content: center;
     }
+
+    a {
+      color: #f76a0a;
+      padding: 0 4px;
+    }
   }
 
   .face-container {
@@ -61,9 +66,9 @@
     flex-direction: column;
 
     svg {
-      height: 50px;
-      width: 50px;
-      margin-bottom: 100px;
+      height: 70px;
+      width: 70px;
+      margin-bottom: 85px;
 
       path {
         fill: #e5e5e5;
@@ -80,7 +85,7 @@
 
   @keyframes bounce {
     from { transform: translate3d(0, 0, 0);     }
-    to   { transform: translate3d(0, 100px, 0); }
+    to   { transform: translate3d(0, 85px, 0); }
   }
 
   button {
