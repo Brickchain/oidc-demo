@@ -1,0 +1,98 @@
+.show-content {
+  background: #ffffff;
+  max-width: 400px;
+  min-width: 350px;
+  height: 410px;
+  border-radius: 8px;
+  position: relative;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 15px 30px;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  .hello-container {
+    white-space: nowrap;
+    flex-direction: column;
+
+    h2 {
+      display: flex;
+    }
+
+    .name {
+      color: #20afe2;
+      margin-left: 4px;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    a {
+      color: #f76a0a;
+      padding: 0 4px;
+    }
+  }
+
+  .face-container {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      width: 90px;
+      height: 90px;
+
+      path {
+        fill: #e5e5e5;
+      }
+    }
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+  }
+
+  .login {
+    flex-direction: column;
+
+    svg {
+      height: 70px;
+      width: 70px;
+      margin-bottom: 85px;
+
+      path {
+        fill: #e5e5e5;
+      }
+    }
+  }
+
+  .bouncing-arrow {
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 85px, 0); }
+  }
+
+  button {
+    background: #0b5bab;
+    color: #ffffff;
+    width: 175px;
+    height: 50px;
+    font-size: 16px;
+  }
+}

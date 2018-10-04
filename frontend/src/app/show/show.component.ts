@@ -8,7 +8,8 @@ import * as base64 from 'hi-base64';
 
 @Component({
   selector: 'app-page-show',
-  templateUrl: 'show.component.html'
+  templateUrl: 'show.component.html',
+  styleUrls: ['./show.component.scss']
 })
 export class ShowComponent implements OnInit {
 
@@ -26,31 +27,34 @@ export class ShowComponent implements OnInit {
   push: string
 
   constructor(public http: Http, private config: Config) {
-    var params = new URLSearchParams(window.location.search.split('?')[1]);
-    this.data = params.get('data');
+    this.name = "Jesper"
+    this.loading = false
+    return;
+    // var params = new URLSearchParams(window.location.search.split('?')[1]);
+    // this.data = params.get('data');
 
-    if (this.data != undefined && this.data != null && this.data != "") {
-      this.loggedIn = true;
-      Promise.resolve()
-        .then(() => {
-          // let s = atob(this.data.split('.')[1])
-          let s = base64.decode(this.data.split('.')[1])
-          this.msg = JSON.parse(s)
+    // if (this.data != undefined && this.data != null && this.data != "") {
+    //   this.loggedIn = true;
+    //   Promise.resolve()
+    //     .then(() => {
+    //       // let s = atob(this.data.split('.')[1])
+    //       let s = base64.decode(this.data.split('.')[1])
+    //       this.msg = JSON.parse(s)
 
-          if (this.msg.name != undefined) {
-            this.name = this.msg.name
-            console.log("found name:", this.name)
-          }
+    //       if (this.msg.name != undefined) {
+    //         this.name = this.msg.name
+    //         console.log("found name:", this.name)
+    //       }
 
-          if (this.msg.push_endpoint != undefined) {
-            this.push = this.msg.push_endpoint
-            console.log("found push endpoint:", this.push)
-          }
-        })
-        .then(() => this.loading = false);
-    } else {
-      this.loading = false;
-    }
+    //       if (this.msg.push_endpoint != undefined) {
+    //         this.push = this.msg.push_endpoint
+    //         console.log("found push endpoint:", this.push)
+    //       }
+    //     })
+    //     .then(() => this.loading = false);
+    // } else {
+    //   this.loading = false;
+    // }
   }
 
   ngOnInit(): void {}
