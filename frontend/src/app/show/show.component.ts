@@ -36,6 +36,7 @@ export class ShowComponent implements OnInit {
         .then(() => {
           let s = base64.decode(this.data.split('.')[1])
           this.msg = JSON.parse(s)
+          console.log("msg:", this.msg)
 
           if (this.msg.name != undefined) {
             this.name = this.msg.name
